@@ -11,7 +11,7 @@ public class RestClient {
 
         return RestAssured
                 .given()
-                .baseUri(ConfigReader.get("apiBaseUrl"))
+                .baseUri(ConfigReader.getApiUrl())
                 .header("Content-Type", "application/json")
                 .accept("application/json")
                 .log().all();

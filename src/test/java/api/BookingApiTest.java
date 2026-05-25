@@ -3,6 +3,7 @@ package api;
 import api.services.AuthService;
 import api.services.BookingService;
 import config.ConfigReader;
+import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +16,7 @@ public class BookingApiTest {
     BookingService booking = new BookingService();
 
     @Test
+    @Description("Create booking API test")
     public void createBookingTest() {
 
         Response res = booking.createBooking("HARRY", "POTTER", 5000);
