@@ -12,7 +12,7 @@ public class BaseTest {
         DriverFactory.initDriver();
 
         DriverFactory.getDriver()
-                .get(ConfigReader.getProperty("baseUrl"));
+                .get(ConfigReader.get("uiBaseUrl"));
     }
 
     @AfterMethod
